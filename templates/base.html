@@ -12,7 +12,12 @@
     <title>Hello, pybo!</title>
 </head>
 <body>
+{% include 'navbar.html' %}
 {% block content %}
 {% endblock %}
+<!-- jQuery JS -->
+<script src="{% static 'jquery-3.4.1.min.js' %}"></script>
+<!-- Bootstrap JS : 부트스트랩JS는 jQuery를 필요로 하므로 jQuery를 먼저 임포트 해줘야한다 <주의!> -->
+<script src="{% static 'bootstrap.min.js' %}"></script>
 </body>
 </html>
