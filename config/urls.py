@@ -15,11 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-from pybo import views
+from pybo.views import base_views
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
     url('pybo/', include('pybo.urls')),
     url('common/', include('common.urls')),
-    url('', views.index, name='index'),
+    url(r'^admin/', admin.site.urls),
+    url('', base_views.index, name='index'),
 ]

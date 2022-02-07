@@ -5,7 +5,7 @@
     <h5 class="border-bottom pb-2">댓글등록하기</h5>
     <form method="post" class="post-form my-3">
         {% csrf_token %}
-        {% include 'form_errors.html' %}
+        {% include "form_errors.html" %}
         <div class="form-group">
             <label for="content">댓글내용</label>
             <textarea class="form-control" name="content" id="content"
