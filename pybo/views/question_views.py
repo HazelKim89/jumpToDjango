@@ -19,6 +19,7 @@ def question_create(request):
         if form.is_valid():
             question = form.save(commit=False) # QuestionForm이Question모델과 연결된 폼이므로 'form.save()'이렇게 사용 가능
             question.author = request.user
+            question.save()
             return redirect('pybo:index')
     else:
         form = QuestionForm()
