@@ -104,7 +104,6 @@ def comment_modify_answer(request, comment_id):
     :param comment_id:
     :return:
     """
-    print("commint?modify")
     comment = get_object_or_404(Comment, pk=comment_id)
     if request.user != comment.author:
         messages.error(request, '댓글수정권한이 없습니다')
